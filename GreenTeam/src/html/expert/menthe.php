@@ -39,7 +39,8 @@
                         <li>Planter les semis en mars</li>
                         <li>Couper les tiges pour avoir de plus grandes feuilles</li>
                     </ul>
-
+                    
+                    <h2>Valeur actuelle</h2>
                     <?php
 
                         $servername = "localhost";
@@ -68,8 +69,7 @@
 
                     ?>
 
-                    <h2>Valeur actuelle</h2>
-                    <p>Valeur numérique du taux d'humidité dans la terre : </p>
+                    <!-- <p>Valeur numérique du taux d'humidité dans la terre : </p> -->
                 </div>
                 <div id="imageMenthe">
                 </div>

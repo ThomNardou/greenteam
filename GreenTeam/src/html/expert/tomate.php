@@ -70,8 +70,8 @@
 
                     ?>
                     
-                    <p>Valeur numérique du taux d'humidité dans la terre : </p>
-                    <p>Fréquence d'arrosage : </p>
+                    <!-- <p>Valeur numérique du taux d'humidité dans la terre : </p>
+                    <p>Fréquence d'arrosage : </p> -->
                 </div>
                 <div id="imageTomate">
                 </div>
