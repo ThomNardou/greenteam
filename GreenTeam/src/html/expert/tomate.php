@@ -55,7 +55,7 @@
                         // set the PDO error mode to exception
                         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                        $requete = 'SELECT * FROM t_typplante WHERE plaNom LIKE "tomate"';
+                        $requete = 'SELECT * FROM t_typplante WHERE idTypPLante LIKE 10';
                         $statement = $conn->prepare($requete);
                         $statement->execute();
 
@@ -69,6 +69,8 @@
                         echo $varfrequence;
 
                     ?>
+
+                    <br><br><button><img src="/resources/Images/1244017.png" alt=""><a href="../formulaireDeModification.php">Modifier</a></button>
                     
                     <!-- <p>Valeur numérique du taux d'humidité dans la terre : </p>
                     <p>Fréquence d'arrosage : </p> -->

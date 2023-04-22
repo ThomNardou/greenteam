@@ -7,20 +7,20 @@
         </head>
         <body>
             <div id="container">
-                <!-- <header>
+                <header>
                         <div id="title">
                             <h1><img src="../../resources/Images/logo.png" alt="" style="height: 100px; align-self: center;"></h1>
                         </div>
-                </header> -->
+                </header>
 
                 <form method="post">
                     <div id="formulaire">
                         <label>Nom actuel</label>
-                        <input type="text" name="nomactuel">
+                        <input type="text" name="nomactuel"><br><br>
                         <label>Frequence</label>
-                        <input type="text" name="prenom">
+                        <input type="text" name="prenom"><br><br>
                         <label>Nom</label>
-                        <input type="text" name="nom">
+                        <input type="text" name="nom"><br><br>
                         <input type="submit" value="Ajouter">
                     </div>
 		        </form>
@@ -44,14 +44,9 @@
 
                     
                     $requete = "UPDATE `t_typplante` SET `plaNom` = '$nom', `plaFrequece` = '$frequence' , `plaVolume` = '20.00', `plaTempsArro` = '300' WHERE `plaNom` LIKE '$nomactuel';";
-                    var_dump($requete); //Permet de voir ce que le programme envoie
+                    // var_dump($requete); //Permet de voir ce que le programme envoie
                     
-                    // $resultat = $conn->query($requete);
-                    if ($requete)
-                        echo "<p id=testPhp>Le contact a été ajouté</p>";
-                    else
-                        echo "<p id=Test2>Erreur</p>";
-                
+                    $resultat = $conn->query($requete);
                 ?>
                 </div>
             </div>

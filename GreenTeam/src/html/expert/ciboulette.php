@@ -68,6 +68,9 @@
                         echo $varfrequence;
 
                     ?>
+
+                    <br><br><button><img src="/resources/Images/1244017.png" alt=""><a href="../formulaireDeModification.php">Modifier</a></button>
+
                 </div>
                 <div id="imageCiboulette">
                 </div>

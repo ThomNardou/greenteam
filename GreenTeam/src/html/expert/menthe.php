@@ -69,6 +69,8 @@
 
                     ?>
 
+                    <br><br><button><img src="/resources/Images/1244017.png" alt=""><a href="../formulaireDeModification.php">Modifier</a></button>
+
                     <!-- <p>Valeur numérique du taux d'humidité dans la terre : </p> -->
                 </div>
                 <div id="imageMenthe">
