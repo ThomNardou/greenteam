@@ -8,6 +8,7 @@
 body{
     margin: 0px;
     height: 100%;
+    width: 100%;
 }
 *{
     animation-duration: 2s;
@@ -22,7 +23,21 @@ header{
     width: 100%;
     color: white;
     position:fixed;
+    z-index: 100;
 }
+
+section {
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+    height: 538px;
+    
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
 /* Pour le titre */
 #title{
     text-align: center;
@@ -36,6 +51,7 @@ header{
 /* Pour que la checkbox ne s'affiche pas */
 #hamburger {
     display: none;
+    z-index: 1000;
 }
 #hamburger-logo {
     /* Pour que le curseur soit un pointeur */
@@ -43,7 +59,7 @@ header{
     background: transparent;
     width: 200px;
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 22px;
     display: block;
     color:rgb(156, 154, 154);
     /* Pour que le menu hamburger s'affiche toujours */
@@ -51,34 +67,44 @@ header{
     /* Pour que le menu hamburger soit "rangé" par défaut */
     transform: translateX(-168px);
     padding: 10px; 
+    z-index: 1000;
+    font-size: 30px;
+    float: left;
+    margin-left: 50px;
+
 }
 nav {
     display: flex;
     flex-direction: column;
     background: black;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 140px;
     height:1000em;
     /* Pour que les liens soient "rangés" par défaut */
     transform: translateX(-200px);
     transition: 0.7s;
+    z-index: 1000;
     /* position: fixed; */
 } 
 /* Lorsque #hamburger est coché, le nav qui est dans le même parent changent de propriété */
 #hamburger:checked ~ nav {
     /* Changement de la position pour afficher les menus */
     transform: translate(0);
+    z-index: 1000;
 }
 nav a {
     color: white;
     text-decoration: none;
     padding: 10px;
+    z-index: 1000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .menu {
     /* Pour que le menu reste en place quand on scroll */
     position: fixed;
     /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
     width: 0px;
+    z-index: 1000;
 }
 /* ==========================================CONTENU================================================ */
 /* ==================ACCUEIL================= */
@@ -97,12 +123,21 @@ main{
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
     animation-name: apparition;
     animation-duration: 1s;
-    height: 650px;
+    height: 538px;
+    z-index: -10;
+    /* height: calc(100% - 7em); */
+    /* position: relative;
+    overflow-y: scroll; */
 }
 #container{
     display: flex;
     height: 100%;
 }
+
+.description {
+    z-index: -10;
+}
+
 .all section{
     margin: 0px;
     width: 100%;
@@ -118,8 +153,8 @@ main{
     margin-top: 50px;
     height: 200px;
     width: auto;
-    margin-bottom: 30px;
     gap: 1rem;
+    z-index: 10;
 }
 
 .galerieDePlante > a {
@@ -170,6 +205,23 @@ main{
 }
 a:hover {
     opacity: 0.5;
+}
+
+@media all and (max-width: 991px)
+{
+    .item {
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    nav {
+        z-index: 100;
+    }
+
+    #hamburger-logo {
+        margin-left: 10px;
+    }
 }
 /* ==================INFO PLANTE================= */
 .infoPlante{
@@ -239,9 +291,10 @@ footer{
     background-color: rgb(91, 88, 88);
     width: 100%;
     height: 7em;
-    position: fixed;
-    left: 0;
+    position: absolute;
     bottom: 0;
+    margin-top: 50px;
+    z-index: 100;
 }
 #info{
     width: 50%;
