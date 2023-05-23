@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 13 Avril 2023 à 13:03
+-- Généré le :  Mar 23 Mai 2023 à 09:57
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -30,6 +30,30 @@ CREATE TABLE `t_arroseur` (
   `idArroseur` int(11) NOT NULL,
   `fkPlante` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_humidity`
+--
+
+CREATE TABLE `t_humidity` (
+  `idHumidity` int(11) NOT NULL,
+  `humValues` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `t_humidity`
+--
+
+INSERT INTO `t_humidity` (`idHumidity`, `humValues`) VALUES
+(1, 4),
+(2, 10),
+(3, 80),
+(4, 100),
+(5, 10),
+(6, 200),
+(7, 200);
 
 -- --------------------------------------------------------
 
@@ -66,6 +90,12 @@ ALTER TABLE `t_arroseur`
   ADD KEY `fkPlante` (`fkPlante`);
 
 --
+-- Index pour la table `t_humidity`
+--
+ALTER TABLE `t_humidity`
+  ADD PRIMARY KEY (`idHumidity`);
+
+--
 -- Index pour la table `t_typplante`
 --
 ALTER TABLE `t_typplante`
@@ -81,6 +111,11 @@ ALTER TABLE `t_typplante`
 --
 ALTER TABLE `t_arroseur`
   MODIFY `idArroseur` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `t_humidity`
+--
+ALTER TABLE `t_humidity`
+  MODIFY `idHumidity` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `t_typplante`
 --
