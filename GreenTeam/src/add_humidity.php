@@ -1,6 +1,7 @@
 <?php
 // Récupérez la valeur d'humidité envoyée dans la requête HTTP GET
 $humidity = $_GET["humidity"];
+$idArrosoire = $_GET["id"];
 
 // Configuration de la connexion à la base de données MySQL
 $servername = "127.0.0.1";
