@@ -18,7 +18,7 @@
                         <label>Nom actuel</label>
                         <input type="text" name="nomactuel"><br><br>
                         <label>Frequence</label>
-                        <input type="text" name="prenom"><br><br>
+                        <input type="text" name="frequence"><br><br>
                         <label>Nom</label>
                         <input type="text" name="nom"><br><br>
                         <input type="submit" value="Ajouter">
@@ -28,25 +28,29 @@
                 <?php
 
                     $servername = "localhost";
-
                     $username = "root";
-
                     $password = "root";
 
-                    $conn = new PDO("mysql:host=$servername;dbname=db_arroseur", $username, $password);
-
-                    // set the PDO error mode to exception
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                    $nom = $_POST['nom'];
-                    $frequence = $_POST['prenom'];
                     $nomactuel = $_POST['nomactuel'];
+                    $frequence = $_POST['frequence'];
+                    $nom = $_POST['nom'];
+
+                    if ($nom != null && $frequence != null && $nomactuel != null) {
+
+                        $conn = new PDO("mysql:host=$servername;dbname=db_arroseur", $username, $password);
+                        var_dump($conn);
+
+                        // set the PDO error mode to exception
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
                     
-                    $requete = "UPDATE `t_typplante` SET `plaNom` = '$nom', `plaFrequece` = '$frequence' , `plaVolume` = '20.00', `plaTempsArro` = '300' WHERE `plaNom` LIKE '$nomactuel';";
-                    // var_dump($requete); //Permet de voir ce que le programme envoie
+
+                        $requete = "UPDATE `t_typplante` SET `plaNom` = '$nom', `plaFrequece` = '$frequence' , `plaVolume` = '20.00', `plaTempsArro` = '300' WHERE `plaNom` LIKE '$nomactuel';";
                     
-                    $resultat = $conn->query($requete);
+                        $resultat = $conn->query($requete);
+
+                    }
                 ?>
                 </div>
             </div>
