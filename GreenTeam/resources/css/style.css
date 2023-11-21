@@ -34,6 +34,7 @@ nav{
 ul {
     list-style: none;
     display: flex;
+    
     width: 50%;
 }
 
@@ -61,10 +62,6 @@ h1, h2 {
     padding-bottom:1%;
 }
 
-main {
-    padding-bottom: 50%;
-}
-
 main, footer {
     background-color: rgb(218, 218, 218);
 }
@@ -74,9 +71,7 @@ hr {
     margin-right:4%;
 }
 
-footer {
-    position:absolute;
-        width:100%;
-        bottom:0px;
-    padding-right: 100%;
+details{
+    display: flex;
+    flex-wrap: wrap;
 }
