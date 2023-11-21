@@ -35,7 +35,7 @@
                     $frequence = $_POST['frequence'];
                     $nom = $_POST['nom'];
 
-                    if ($nom != null && $frequence != null && $nomactuel != null) {
+                    if ($_POST != null && $nom != null && $frequence != null && $nomactuel != null) {
 
                         $conn = new PDO("mysql:host=$servername;dbname=db_arroseur", $username, $password);
                         var_dump($conn);
