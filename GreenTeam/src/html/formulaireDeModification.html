@@ -24,34 +24,6 @@
                         <input type="submit" value="Ajouter">
                     </div>
 		        </form>
-
-                <?php
-
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "root";
-
-                    $nomactuel = $_POST['nomactuel'];
-                    $frequence = $_POST['frequence'];
-                    $nom = $_POST['nom'];
-
-                    if ($_POST != null && $nom != null && $frequence != null && $nomactuel != null) {
-
-                        $conn = new PDO("mysql:host=$servername;dbname=db_arroseur", $username, $password);
-                        var_dump($conn);
-
-                        // set the PDO error mode to exception
-                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-                    
-
-                        $requete = "UPDATE `t_typplante` SET `plaNom` = '$nom', `plaFrequece` = '$frequence' , `plaVolume` = '20.00', `plaTempsArro` = '300' WHERE `plaNom` LIKE '$nomactuel';";
-                    
-                        $resultat = $conn->query($requete);
-
-                    }
-                ?>
                 </div>
             </div>
         </body>
